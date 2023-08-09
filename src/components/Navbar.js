@@ -21,13 +21,13 @@ function Navbar() {
         {/* Logo */}
 
         <Link className="" to={`/`}>
-          <img className="w-10 m-2 bg-gray-500 rounded p-1" src="../images/logo1.png" alt="article images" />
+          <img className="w-16 m-2 bg-gray-500 rounded p-1" src="../images/logo1.png" alt="article images" />
         </Link>
 
         {/* Source */}
 
         <select
-          className="bg-gray-500 w-25 h-10"
+          className="bg-gray-500 w-25 h-10 rounded"
           value={source}
           onChange={(e) => {
             setSource(e.target.value);
@@ -42,7 +42,7 @@ function Navbar() {
 
         {/* <Filter /> */}
         <select
-          className="bg-gray-500 w-25 h-10"
+          className="bg-gray-500 w-25 h-10 rounded"
           value={selected}
           onChange={(e) => {
             setSelect(e.target.value);
@@ -59,7 +59,7 @@ function Navbar() {
       
       {/* Search */}
 
-      <div className='flex items-center justifyContent-center gap-2 bg-gray-500 h-10'>
+      <div className='flex items-center justifyContent-center rounded gap-2 bg-gray-500 h-10'>
         <SearchIcon />
         <input
           className='w-[80%] p-1 rounded bg-gray-500'

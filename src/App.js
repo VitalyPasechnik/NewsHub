@@ -39,7 +39,7 @@ const App: React.FC = () => {
 
   // Загрузка новостей из API
 
-  const loadingNews = async (source = 'NewsApi') => {
+  const loadingNews = async (source) => {
 
     const resultApiNews = (url) => {
       axios.get(url).then(res => {
@@ -106,7 +106,7 @@ const App: React.FC = () => {
   }
 
   useEffect(() => {
-    loadingNews();
+    loadingNews('NewsApi');
   }, []);
 
   useEffect(() => {
