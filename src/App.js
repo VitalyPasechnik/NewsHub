@@ -40,6 +40,12 @@ const App: React.FC = () => {
   // Загрузка новостей из API
 
   const loadingNews = async (source = 'NewsApi') => {
+
+    const resultApiNews = (url) => {
+      axios.get(url).then(res => {
+        setNews(res.data.articles);
+      })
+    }
     // console.log(source);
 
     // NewsApi
@@ -49,10 +55,8 @@ const App: React.FC = () => {
       '&from=2023-08-02&to=2023-08-02' +
       '&sortBy=popularity' +
       '&apiKey=b96ea1347821468e966eefa845c14e9e';
-  
-      axios.get(url).then(res => {
-        setNews(res.data.articles);
-      })
+
+      resultApiNews(url);
     }
     
     // GNews
@@ -66,9 +70,7 @@ const App: React.FC = () => {
         + `&lang=en&country=${country}&max=100&apikey=`
         + apikey;
     
-      axios.get(url).then(res => {
-        setFilteredNews(res.data.articles);
-      })
+      resultApiNews(url);
     }
     
     // // NEWSDATA
