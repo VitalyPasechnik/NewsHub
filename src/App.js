@@ -106,7 +106,7 @@ const App: React.FC = () => {
   }
 
   useEffect(() => {
-    loadingNews('NewsApi');
+    loadingNews('GNews');
   }, []);
 
   useEffect(() => {

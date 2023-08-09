@@ -9,7 +9,7 @@ function Navbar() {
   const { handleInputChange, handleSelect, loadingNews } = useContext(Context);
   const [query, setQuery] = useState('');
   const [selected, setSelect] = useState(0);
-  const [source, setSource] = useState('NewsApi');
+  const [source, setSource] = useState('GNews');
 
   return (
     <div className="flex items-center space-between gap-5 p-2 border border-gray-500">
@@ -34,8 +34,8 @@ function Navbar() {
             loadingNews(e.target.value)
           }}
         >
-          <option value={'NewsApi'}>NewsApi</option>
           <option value={'GNews'}>GNews</option>
+          <option value={'NewsApi'}>NewsApi</option>
           {/* <option value={'NEWSDATA'}>NEWSDATA</option>
           <option value={'RapidApi'}>RapidApi</option> */}
         </select>
